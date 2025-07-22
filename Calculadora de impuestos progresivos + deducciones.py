@@ -1,6 +1,13 @@
 year_income = int(input("Ingrese su cantidad de ingreso anual en GTQ\n"))
 dependients = int(input("Ingrese el número de dependientes\n"))
 
+if year_income < 40000 and dependients > 2:
+    print("Estas exonerado de impuestos")
+    exit()
+
+year_income = year_income - dependients * 1000
+print(year_income)
+
 if year_income <= 30000:
     tax = year_income * 0.05
 elif 30001 < year_income <= 60000:
